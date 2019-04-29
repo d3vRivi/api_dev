@@ -1,0 +1,21 @@
+body{
+    overflow-x: hidden;
+}
+/* Main content */
+#page-content-wrapper{
+    width: 88%;
+    position: absolute;
+    padding: 15px;
+    margin-left: 220px;
+}
+#page-content-wrapper p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#page-content-wrapper h5{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#page-content-wrapper .card-body{
+    width: 100px;
+}
+
+
