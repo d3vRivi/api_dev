@@ -6,6 +6,9 @@ include ("header.php");
 
 <head>
     <title>Books</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/CSS/dataTables.bootstrap.min.css">
+    
 
      <!-- jQuery -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -71,9 +74,9 @@ include ("header.php");
                             <h2><i class="fas fa-book"></i> Books</h2>
                             <input style="float: right" type="button" class="btn btn-danger" id="addNew" value="Add New">
                             <br><br>
-                            <table class="table table-hover table-bordered">
+                            <table class="table table-hover table-bordered" style="width:1100px;">
                                 <thead>
-                                    <tr style="font-weight:bold; font-family:Lato; font-size:14px;" >
+                                    <tr style="font-weight:bold; font-family:Lato; font-size:14px;">
                                         <td>ID</td>
                                         <td>ISBN</td>
                                         <td>Title</td>
@@ -100,6 +103,8 @@ include ("header.php");
 
     <script src="assets/JS/bootstrap.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="assets/JS/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="assets/JS/dataTables.bootstrap.min.js" type="text/javascript"></script>
 
             <script type="text/javascript">
                $(document).ready(function() {
@@ -127,19 +132,20 @@ include ("header.php");
                                 $('tbody').append(response);
                                 start += limit;
                                 getExistingData(start, limit);
-                            }
+                            }else
+                                $(".table").DataTable();
                         }
                     });
                 }
 
                 function manageData(key){
-                    var isbn = $("isbn");
-                    var title = $("title");
-                    var author = $("author");
-                    var year = $("year");
-                    var category = $("category");
-                    var copies = $("copies");
-                    var type = $("type")
+                    var isbn = $("#isbn");
+                    var title = $("#title");
+                    var author = $("#author");
+                    var year = $("#year");
+                    var category = $("#category");
+                    var copies = $("#copies");
+                    var type = $("#type")
 
 
                     if (isNotEmpty(isbn) && isNotEmpty(title) && isNotEmpty(author) && isNotEmpty(year) && isNotEmpty(category) && isNotEmpty(copies) && isNotEmpty(type)) {

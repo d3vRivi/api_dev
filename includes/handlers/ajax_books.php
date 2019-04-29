@@ -43,7 +43,7 @@
 		$year = $con->real_escape_string($_POST['year']);
 		$category = $con->real_escape_string($_POST['category']);
 		$copies = $con->real_escape_string($_POST['copies']);
-		$itemType = $con->real_escape_string($_POST['itemType']);
+		$type = $con->real_escape_string($_POST['type']);
 
 		
 		if ($_POST['key'] == 'addNew') {
@@ -51,8 +51,8 @@
 			if ($sql->num_rows > 0)
 				exit("A Book Entry With This Name Already Exists!");
 			else {
-				$con->query("INSERT INTO books (isbn, title, author, year, category, copies, itemType) 
-							VALUES ('$isbn', '$title', '$author', '$year', '$category', '$copies', '$itemType')");
+				$con->query("INSERT INTO books (isbn, title, author, year, category, copies, type) 
+							VALUES ('$isbn', '$title', '$author', '$year', '$category', '$copies', '$type')");
 				exit('Book Entry Has Been Inserted!');
 			}
 		}
