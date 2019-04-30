@@ -2,7 +2,7 @@
 <html lang="en">
 <body>
 <ul class="sidebar-nav">
-      <img src="http://www.natlib.lk/img/header/nldsb-logo.png" height="100" width="700" style="margin-left:10px;"><hr>
+      <img src="http://www.natlib.lk/img/header/nldsb-logo.png" height="100" width="700" style="margin-left:2px;"><hr>
 
       <center><h6>Welcome <?php echo $user['first_name']; echo "!";?></h6></center><hr>
 

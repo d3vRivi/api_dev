@@ -7,7 +7,7 @@ include ("header.php");
 <head>
     <title>Books</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/CSS/dataTables.bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/CSS/dataTables.bootstrap.min.css"> -->
     
 
      <!-- jQuery -->
@@ -15,6 +15,12 @@ include ("header.php");
      <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.css"/>
+ 
+ <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
+ 
+
 
 </head>
 
@@ -29,8 +35,8 @@ include ("header.php");
         </div>
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
+        <div id="page-content-wrapper" >
+            <div class="container-fluid" >
                 <div class="container" style="margin-top:30px;">
 
                 <!-- Modal -->
@@ -69,14 +75,14 @@ include ("header.php");
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2><i class="fas fa-book"></i> Books</h2>
-                            <input style="float: right" type="button" class="btn btn-danger" id="addNew" value="Add New">
-                            <br><br>
-                            <table class="table table-hover table-bordered" style="width:1100px;">
+                    <div class="row" style="margin-left:-70px;" >
+                        <div class="col-md-12 col-md-offset-2">
+                            <h2><i class="fas fa-book"></i> Books</h2><br>
+                            <input style="float: left" type="button" class="btn btn-danger" id="addNew" value="Add New">
+                            <br><br><br>
+                            <table class="table table-hover table-bordered" style="width:1200px; font-size:14px;"">
                                 <thead>
-                                    <tr style="font-weight:bold; font-family:Lato; font-size:14px;">
+                                    <tr style="font-weight:bold; font-family:Lato;">
                                         <td>ID</td>
                                         <td>ISBN</td>
                                         <td>Title</td>
@@ -103,8 +109,6 @@ include ("header.php");
 
     <script src="assets/JS/bootstrap.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="assets/JS/jquery.dataTables.min.js" type="text/javascript"></script>
-    <script src="assets/JS/dataTables.bootstrap.min.js" type="text/javascript"></script>
 
             <script type="text/javascript">
                $(document).ready(function() {
