@@ -9,6 +9,7 @@ $em2 = ""; //email 2
 $password = ""; //password
 $password2 = ""; //password 2
 $date = ""; //Sign up date 
+$user_type = "";
 $error_array = array(); //Holds error messages
 
 if(isset($_POST['register_button'])){

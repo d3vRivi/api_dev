@@ -1,3 +1,12 @@
+<?php
+if (isset($_SESSION['email'])) {
+    $userLoggedIn = $_SESSION['email'];
+    $user_details_query = mysqli_query($con, "SELECT * FROM members WHERE email = '$userLoggedIn'" );
+    $user = mysqli_fetch_array($user_details_query);
+} else {
+    header("Location: register.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <body>

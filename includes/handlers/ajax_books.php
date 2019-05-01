@@ -38,12 +38,12 @@
         }
         
         $isbn = $con->real_escape_string($_POST['isbn']);
-		$title = $con->real_escape_string($_POST['title']);
-		$author = $con->real_escape_string($_POST['author']);
-		$year = $con->real_escape_string($_POST['year']);
-		$category = $con->real_escape_string($_POST['category']);
-		$copies = $con->real_escape_string($_POST['copies']);
-		$type = $con->real_escape_string($_POST['type']);
+				$title = $con->real_escape_string($_POST['title']);
+				$author = $con->real_escape_string($_POST['author']);
+				$year = $con->real_escape_string($_POST['year']);
+				$category = $con->real_escape_string($_POST['category']);
+				$copies = $con->real_escape_string($_POST['copies']);
+				$type = $con->real_escape_string($_POST['type']);
 
 		
 		if ($_POST['key'] == 'addNew') {
