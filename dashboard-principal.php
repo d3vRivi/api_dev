@@ -15,7 +15,7 @@ require 'header.php';
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
       <?php
-        include ("sidebar-dash.php");
+        include ("sidebar-dash-p.php");
       ?> 
     </div>
 

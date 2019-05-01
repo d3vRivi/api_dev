@@ -1,8 +1,9 @@
 <?php
+
 ob_start(); //Turns on output buffering 
 session_start();
 
-// $con = mysqli_connect("localhost", "root", "", "lib"); //Connection variable
+$con = mysqli_connect("localhost", "root", "", "lib"); //Connection variable
 
 // $myServer = "api69.database.windows.net";
 // $myUser = "azula69";
@@ -23,21 +24,22 @@ session_start();
 // 	   die( print_r( sqlsrv_errors(), true));
 //   }
 
-	$host = "tcp:api69.database.windows.net, 1443";
-	$user = "azula69";
-	$pwd = "iloveMahee123";
-	$db = "apiproject69";
-	$conn= new PDO("sqlsrv:Server = $host; Database= $db", $user, $pwd);
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	// $host = "(LocalDB)\MSSQLLocalDB";
+	// $user = "";
+	// $pwd = "";
+	// $db = "apidb";
+	// $conn= new PDO("sqlsrv:Server = $host; Database= $db", $user, $pwd);
+	// $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	if( $conn ) {echo "Connection established";}
-	else
-	{echo "Connection could not be established.<br />";
-	die( print_r( sqlsrv_errors(), true));}
+	// if( $conn ) {echo "Connection established";}
+	// else
+	// {echo "Connection could not be established.<br />";
+	// die( print_r( sqlsrv_errors(), true));}
 // }catch(Exception $e){die(print_r($e));}
-// if(mysqli_connect_errno()) 
-// {
-// 	echo "Failed to connect: " . mysqli_connect_errno();
-// }
+
+if(mysqli_connect_errno()) 
+{
+	echo "Failed to connect: " . mysqli_connect_errno();
+}
 
 ?>
